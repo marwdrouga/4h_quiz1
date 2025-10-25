@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz – Τεχνικές Κωδικοποίησης</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f7f9fc;
+      color: #222;
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #34495e;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+
+    .question {
+      background: white;
+      padding: 15px 20px;
+      margin: 15px 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: background 0.3s;
+    }
+
+    .question.correct { background-color: #d5f5d5; }
+    .question.wrong { background-color: #f8d7da; }
+
+    .options label {
+      display: block;
+      padding: 5px 0;
+      cursor: pointer;
+    }
+
+    button {
+      display: block;
+      margin: 30px auto;
+      padding: 12px 25px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    #result {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 25px;
+    }
+
+    .correctText { color: green; }
+    .wrongText { color: red; }
+  </style>
+</head>
+<body>
+
+  <h1>Quiz – Τεχνικές Κωδικοποίησης</h1>
+
+  <form id="quizForm">
+
+    <!-- Άσκηση 1 -->
+    <h2>Άσκηση 1: Βασικές Τεχνικές Κωδικοποίησης</h2>
+
+    <div class="question">
+      <h3>1. Η μέθοδος PCM συμπιέζει τα ψηφιακά δείγματα ώστε να μειωθεί το μέγεθος του αρχείου.</h3>
+      <div class="options">
+        <label><input type="radio" name="q1" value="Λ"> Λάθος</label>
+        <label><input type="radio" name="q1" value="Σ"> Σωστό</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>2. Η ADPCM χρησιμοποιεί έναν προσαρμοστικό μηχανισμό πρόβλεψης που βελτιστοποιεί τη συμπίεση σε σχέση με την DPCM.</h3>
+      <div class="options">
+        <label><input type="radio" name="q2" value="Σ"> Σωστό</label>
+        <label><input type="radio" name="q2" value="Λ"> Λάθος</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>3. Η μέθοδος LPC είναι ιδιαίτερα κατάλληλη για την κωδικοποίηση φωνής σε πολύ χαμηλά bitrates.</h3>
+      <div class="options">
+        <label><input type="radio" name="q3" value="Σ"> Σωστό</label>
+        <label><input type="radio" name="q3" value="Λ"> Λάθος</label>
+      </div>
+    </div>
+
+    <!-- Άσκηση 2 -->
+    <h2>Άσκηση 2: Μορφές και Εφαρμογές Κωδικοποίησης</h2>
+
+    <div class="question">
+      <h3>4. Η μ-Law PCM χρησιμοποιείται κυρίως στις τηλεπικοινωνίες στην Ευρώπη.</h3>
+      <div class="options">
+        <label><input type="radio" name="q4" value="Λ"> Λάθος</label>
+        <label><input type="radio" name="q4" value="Σ"> Σωστό</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>5. Η A-Law PCM είναι μη γραμμική κωδικοποίηση που βοηθά στη συμπίεση του δυναμικού εύρους του ήχου.</h3>
+      <div class="options">
+        <label><input type="radio" name="q5" value="Σ"> Σωστό</label>
+        <label><input type="radio" name="q5" value="Λ"> Λάθος</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>6. Η DPCM αποθηκεύει κάθε δείγμα ανεξάρτητα, χωρίς πρόβλεψη ή διαφορές.</h3>
+      <div class="options">
+        <label><input type="radio" name="q6" value="Λ"> Λάθος</label>
+        <label><input type="radio" name="q6" value="Σ"> Σωστό</label>
+      </div>
+    </div>
+
+    <!-- Άσκηση 3 -->
+    <h2>Άσκηση 3: Επίδραση στην Ποιότητα και το Μέγεθος</h2>
+
+    <div class="question">
+      <h3>7. Όσο αυξάνεται το μέγεθος δείγματος (bit depth), τόσο βελτιώνεται η ποιότητα του ήχου και αυξάνεται το μέγεθος του αρχείου.</h3>
+      <div class="options">
+        <label><input type="radio" name="q7" value="Σ"> Σωστό</label>
+        <label><input type="radio" name="q7" value="Λ"> Λάθος</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>8. Η χρήση μεταβλητού ρυθμού μετάδοσης (VBR) επιτρέπει καλύτερη ποιότητα και εξοικονόμηση χώρου σε σχέση με τον σταθερό ρυθμό (CBR).</h3>
+      <div class="options">
+        <label><input type="radio" name="q8" value="Σ"> Σωστό</label>
+        <label><input type="radio" name="q8" value="Λ"> Λάθος</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>9. Η κωδικοποίηση LPC είναι πιο αποτελεσματική για μουσική με πολλά όργανα παρά για ανθρώπινη ομιλία.</h3>
+      <div class="options">
+        <label><input type="radio" name="q9" value="Λ"> Λάθος</label>
+        <label><input type="radio" name="q9" value="Σ"> Σωστό</label>
+      </div>
+    </div>
+
+    <button type="button" onclick="checkAnswers()">Έλεγχος Απαντήσεων</button>
+
+  </form>
+
+  <div id="result"></div>
+
+  <script>
+    function checkAnswers() {
+      const correctAnswers = {
+        q1: "Λ",
+        q2: "Σ",
+        q3: "Σ",
+        q4: "Λ",
+        q5: "Σ",
+        q6: "Λ",
+        q7: "Σ",
+        q8: "Σ",
+        q9: "Λ"
+      };
+
+      let score = 0;
+      const total = Object.keys(correctAnswers).length;
+
+      // καθαρισμός παλιών χρωμάτων
+      document.querySelectorAll('.question').forEach(q => {
+        q.classList.remove('correct', 'wrong');
+      });
+
+      for (const [q, correct] of Object.entries(correctAnswers)) {
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        const questionDiv = document.querySelector(`input[name="${q}"]`).closest('.question');
+        if (selected) {
+          if (selected.value === correct) {
+            score++;
+            questionDiv.classList.add('correct');
+          } else {
+            questionDiv.classList.add('wrong');
+          }
+        } else {
+          questionDiv.classList.add('wrong');
+        }
+      }
+
+      const resultDiv = document.getElementById("result");
+      if (score === total) {
+        resultDiv.innerHTML = `<span class="correctText">🎉 Εξαιρετικά! ${score}/${total} σωστά!</span>`;
+      } else {
+        resultDiv.innerHTML = `<span class="wrongText">Αποτελέσματα: ${score}/${total} σωστά.</span>`;
+      }
+    }
+  </script>
+
+</body>
+</html>
